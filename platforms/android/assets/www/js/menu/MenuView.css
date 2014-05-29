@@ -1,0 +1,33 @@
+#menu_view {
+    background-color: #416b8c;
+    height: 10%;
+    width: 100%;
+    float: left;
+    /* text-align: center; */
+}
+
+#menu_view #menu_icon {
+    width: 10%;
+    /* height: 20%; */
+    float: left;
+    margin: 3%;
+}
+
+#menu_view #menu_logo {
+    width: 30%;
+    float: left;
+    /* position: relative; */
+    /* text-align: center; */
+    margin-left: 22%;
+    /* margin-right: 3%; */
+    margin-top: 1%;
+}
+#menu_view #menu_back {
+    width: 5%;
+    right: 5%;
+    float: left;
+    position: absolute;
+    margin-top: 4%;
+    visibility: hidden;
+}
+#menu_view img {width:100%; height: 100%;}

@@ -1,0 +1,16 @@
+{
+    "navigation":[
+        {"icon":"img/home/contacto_icon.png",     "text":"Contácto",             "link":"js/content/default/Default.html"},
+        {"icon":"img/home/campus_icon.png",       "text":"Campus",               "link":"js/content/default/Default.html"},
+        {"icon":"img/home/biblioteca_icon.png",   "text":"Biblioteca",           "link":"js/content/default/Default.html"},
+        {"icon":"img/home/vida_icon.png",         "text":"Vida Universitaria",   "link":"js/content/default/Default.html"},
+        {"icon":"img/home/noticias_icon.png",     "text":"Noticias",             "link":"js/content/default/Default.html"},
+        {"icon":"img/home/calendario_icon.png",   "text":"Calendario Academico", "link":"js/content/default/Default.html"},
+        {"icon":"img/home/agenda_icon.png",       "text":"Agenda",               "link":"js/content/default/Default.html"},
+        {"icon":"img/home/mediateca_icon.png",    "text":"Mediateca",            "link":"js/content/default/Default.html"},
+        {"icon":"img/home/sociales_icon.png",     "text":"Social",               "link":"js/content/default/Default.html"},
+        {"icon":"img/home/admisiones_icon.png",   "text":"Admisiones",           "link":"js/content/default/Default.html"},
+        {"icon":"img/home/facultad_icon.png",     "text":"Facultad",             "link":"js/content/default/Default.html"},
+        {"icon":"img/home/departamento_icon.png", "text":"Departamento",         "link":"js/content/default/Default.html"}
+    ]
+}
