@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var CONTROLLER;
 var app = {
     // Application Constructor
     initialize: function() {
@@ -27,12 +28,13 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         var aHeight = screen.height;
+
         $('body').css('height', aHeight);
-        if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
+        //if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
             document.addEventListener("deviceready", this.onDeviceReady, false);
-        } else {
+        /*} else {
             this.onDeviceReady(); //this is the browser
-        }
+        } */
     },
     // deviceready Event Handler
     //
@@ -45,20 +47,19 @@ var app = {
     receivedEvent: function(id) {
 
         //Remove splash
-        var aSplash = $.find("#splash");
-        $(aSplash).remove();
 
         $($.find("#main_container")).html('<div id="navBar"></div><div id="sideMenu"></div><div id="content"></div>');
 
+        CONTROLLER = new Controller($.find("#content"));
+        CONTROLLER.initialize(this.initializationCompleted);
+
+    },
+
+    initializationCompleted: function(){
         var aMenu = new Menu($.find("#navBar"));
         aMenu.initialize();
-//        var parentElement = document.getElementById(id);
-//        var listeningElement = parentElement.querySelector('.listening');
-//        var receivedElement = parentElement.querySelector('.received');
-//
-//        listeningElement.setAttribute('style', 'display:none;');
-//        receivedElement.setAttribute('style', 'display:block;');
-//
-//        console.log('Received Event: ' + id);
+
+        CONTROLLER.setMenu(aMenu);
+        CONTROLLER.navigate(Controller.NAV_HOME);
     }
 };

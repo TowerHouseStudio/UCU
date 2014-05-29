@@ -30,11 +30,11 @@ var app = {
         var aHeight = screen.height;
 
         $('body').css('height', aHeight);
-        if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
+        //if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
             document.addEventListener("deviceready", this.onDeviceReady, false);
-        } else {
+        /*} else {
             this.onDeviceReady(); //this is the browser
-        }
+        } */
     },
     // deviceready Event Handler
     //
@@ -47,7 +47,6 @@ var app = {
     receivedEvent: function(id) {
 
         //Remove splash
-
 
         $($.find("#main_container")).html('<div id="navBar"></div><div id="sideMenu"></div><div id="content"></div>');
 

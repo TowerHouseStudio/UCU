@@ -7,8 +7,8 @@ function Controller(aContent){
 Controller.prototype.initialize = function(onComplete){
     var self = this;
 
-    $.get('/data/content.json', function(aData){
-        self.mData = aData;
+    $.get('data/content.json', function(aData){
+        self.mData = (typeof aData === "string") ? JSON.parse(aData) : aData;
         onComplete();
     });
 };

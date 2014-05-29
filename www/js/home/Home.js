@@ -6,7 +6,6 @@ Home.prototype.initialize = function(){
 
     var self = this;
     var aNavigation = CONTROLLER.getNavigation();
-
     var aList = '';
 
     for(var i = 0; i < aNavigation.length; i++){
@@ -16,8 +15,8 @@ Home.prototype.initialize = function(){
     }
 
     var aDiv = '<div id="home_view"><ul id="home_list">'+ aList +'</ul></div>';
-
     this.mContainer.html(aDiv);
+
 
     var aLi = this.mContainer.find('li');
 
@@ -28,7 +27,6 @@ Home.prototype.initialize = function(){
             self.navigate(aLink);
         })
     }
-
 };
 
 Home.prototype.navigate = function(aUrl){
