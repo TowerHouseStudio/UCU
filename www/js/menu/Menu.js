@@ -1,6 +1,8 @@
-function Menu(aContainer){
+function Menu(aContainer, aSideMenuContainer){
     this.mContainer = $(aContainer);
+    this.mSideMenuContainer = $(aSideMenuContainer);
     this.mBack;
+    this.mMenuButton;
     this.mCurrentBack = Controller.NAV_HOME;
 };
 
@@ -10,8 +12,14 @@ Menu.prototype.initialize = function(){
         self.mContainer.html(aContent);
 
         self.mBack = $(self.mContainer.find("#menu_back"));
-
+        self.mMenuButton = $(self.mContainer.find("#menu_icon"));
+        self.mMenuButton.on('tap', $.proxy(self.onMenuClick, self));
     });
+};
+
+Menu.prototype.onMenuClick = function(){
+    var aSideMenu = new SideMenu(this.mSideMenuContainer);
+    aSideMenu.initialize();
 };
 
 Menu.prototype.showBackArrow = function(aBackUrl){

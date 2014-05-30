@@ -4,6 +4,8 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <preference name="orientation" value="portrait" />
+    <preference name="fullscreen" value="true" />
     <name>UCU</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

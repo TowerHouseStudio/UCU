@@ -1,3 +1,23 @@
+@media all and (orientation: portrait){
+    #home_view #home_list { padding: 10% 0px; height: 100%; }
+    
+    #home_view li {
+        width: 33%;
+        height: 24%;
+        margin-top: 2%;
+    }
+}
+
+@media all and (orientation: landscape){
+    #home_view #home_list { padding: 5% 0px; height: 100%; }
+    
+    #home_view li {
+        width: 25%;
+        height: 24%;
+        margin-top: 2%;
+    }
+}
+
 #home_view {
     float: left;
     position: relative;
@@ -5,14 +25,11 @@
     height: 100%;
 }
 
-#home_view #home_list { list-style-type: none; margin: 0px; padding: 0px; height: 100%; padding-top: 10%;}
+#home_view #home_list { list-style-type: none; margin: 0px; }
 
 #home_view li {
-    width: 33%;
-    height: 24%;
     float: left;
     text-align: center;
-    margin-top: 2%;
 }
 
 #home_view #home_item {
