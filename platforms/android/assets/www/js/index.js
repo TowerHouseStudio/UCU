@@ -49,7 +49,7 @@ var app = {
 
         //Remove splash
 
-        $($.find("#main_container")).html('<div id="navBar"></div><div id="sideMenu"></div><div id="content"></div>');
+        $($.find("#main_container")).html('<div id="navBar"></div><div id="content"></div><div id="sideMenu"></div>');
 
         CONTROLLER = new Controller($.find("#content"));
         CONTROLLER.initialize(this.initializationCompleted);
@@ -57,7 +57,7 @@ var app = {
     },
 
     initializationCompleted: function(){
-        var aMenu = new Menu($.find("#navBar"));
+        var aMenu = new Menu($.find("#navBar"), $.find("#sideMenu"));
         aMenu.initialize();
 
         CONTROLLER.setMenu(aMenu);

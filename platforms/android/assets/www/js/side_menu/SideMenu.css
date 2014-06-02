@@ -1,0 +1,73 @@
+@media all and (orientation: portrait){
+    #side_menu_view #menu_list {
+        width: 80%;
+        height: 100%;
+    }
+    
+    #side_menu_view #menu_list li {
+        width: 100%;
+        height: 5%;
+        padding-top: 5%;
+    }
+    
+    #side_menu_view #menu_list #item_icon_container #item_icon {
+        height: 50%;
+    }
+
+}
+
+@media all and (orientation: landscape){
+    #side_menu_view #menu_list {
+        width: 90%;
+        height: 100%;
+    }
+    
+    #side_menu_view #menu_list li {
+        width: 100%;
+        height: 6%;
+        margin-top: 1%;
+    }
+    
+    #side_menu_view #menu_list #item_icon_container #item_icon {
+        height: 100%;
+    }
+}
+
+
+#side_menu_view {
+    height: 100%;
+    width: 100%;
+    float: left;
+}
+
+#side_menu_view #menu_list {
+    background-color: #282a33;
+    float: left;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#side_menu_view #menu_list li {
+    float: left;
+    border-bottom: solid 1px gray;
+    color: white;
+}
+
+#side_menu_view #menu_list #item_icon_container {
+    width: 15%;
+    height: 100%;
+    float: left;
+    /* text-align: center; */
+}
+
+#side_menu_view #menu_list #item_icon_container #item_icon {
+    margin: auto;
+    display: block;
+}
+#side_menu_view #menu_list #item_label {
+    float: left;
+    margin: 1% 3%;
+}
+
+.touchStart { background-color: #1d1e25; }

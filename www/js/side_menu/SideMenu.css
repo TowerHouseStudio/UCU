@@ -13,7 +13,18 @@
     #side_menu_view #menu_list #item_icon_container #item_icon {
         height: 50%;
     }
-
+    
+    #side_menu_view #menu_icon {
+        width: 20%;
+        /* margin: 4% 0% 0% 4.5%; */
+    }
+    
+    #side_menu_view #menu_icon #menu_icon_image {
+        width: 50%;
+        
+    
+        margin: 16% 0% 0% 23%;
+}
 }
 
 @media all and (orientation: landscape){
@@ -31,12 +42,34 @@
     #side_menu_view #menu_list #item_icon_container #item_icon {
         height: 100%;
     }
+    
+    #side_menu_view #menu_icon {
+        width: 10%;
+        /* margin: 4% 0% 0% 4.5%; */
+    }
+    
+    #side_menu_view #menu_icon #menu_icon_image {
+        width: 50%;
+        
+    
+        margin: 5% 0% 0% 23%;
+}
 }
 
 
 #side_menu_view {
     height: 100%;
     width: 100%;
+    float: left;
+}
+
+#side_menu_view #menu_icon {
+    position: relative;
+    float: left;
+    height: 100%;
+}
+#side_menu_view #menu_icon #menu_icon_image {
+    position: relative;
     float: left;
 }
 

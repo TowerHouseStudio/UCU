@@ -30,8 +30,11 @@ Home.prototype.initialize = function(){
 };
 
 Home.prototype.navigate = function(aUrl){
-    var aContent = new Content(this.mContainer, aUrl, function(){});
-    aContent.initialize();
+
+    CONTROLLER.navigate(aUrl);
+
+    /*var aContent = new Content(this.mContainer, aUrl, function(){});
+    aContent.initialize();*/
 
     CONTROLLER.getMenu().showBackArrow(Controller.NAV_HOME);
 };

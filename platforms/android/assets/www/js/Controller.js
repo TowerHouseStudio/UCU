@@ -21,11 +21,17 @@ Controller.prototype.navigate = function(aUrl){
         aHome.initialize();
     }
 
+    function _navigate(){
+        var aContent = new Content(self.mContent, aUrl, function(){});
+        aContent.initialize();
+    }
+
     switch(aUrl){
         case Controller.NAV_HOME:
             navigate_home();
             break;
         default:
+            _navigate();
             break;
     }
 };

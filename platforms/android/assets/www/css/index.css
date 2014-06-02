@@ -37,6 +37,7 @@ body {
 
 #main_container { height: 100%;}
 #main_container #navBar { height: 10%; }
+#main_container #sideMenu { /* float:left; */ height: 100%; width: 100%; position: absolute; top: 0px; pointer-events: none;}
 #main_container #content { overflow: hidden; height: 90%;}
 
 
