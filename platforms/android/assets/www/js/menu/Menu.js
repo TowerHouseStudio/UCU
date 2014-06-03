@@ -18,8 +18,16 @@ Menu.prototype.initialize = function(){
 };
 
 Menu.prototype.onMenuClick = function(){
-    var aSideMenu = new SideMenu(this.mSideMenuContainer);
+    this.mMenuButton.off('tap');
+    var aSideMenu = new SideMenu(this.mSideMenuContainer, this);
     aSideMenu.initialize();
+};
+
+Menu.prototype.closeSideMenu = function(aSideMenuDiv){
+    aSideMenuDiv.remove();
+    aSideMenuDiv.empty();
+
+    this.mMenuButton.on('tap', $.proxy(this.onMenuClick, this));
 };
 
 Menu.prototype.showBackArrow = function(aBackUrl){

@@ -109,3 +109,24 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+
+/* Custom, iPhone Retina */
+@media (min-width : 320px) {
+    p { font-size: 1.3em; }
+}
+
+/* Small Devices, Tablets */
+/*@media (min-width : 768px) {
+    p { font-size: 1.3em; }
+}*/
+
+/* Medium Devices, Desktops */
+@media (min-width : 992px) {
+    p { font-size: 2.2em; }
+}
+
+/* Large Devices, Wide Screens */
+/*@media (min-width : 1200px) {
+    p { font-size: 2.2em; }
+}*/

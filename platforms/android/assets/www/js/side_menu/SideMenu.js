@@ -1,5 +1,8 @@
-function SideMenu(aContainer){
+function SideMenu(aContainer, aMenu){
     this.mContainer = $(aContainer);
+    this.mMenu = aMenu;
+    this.mDiv;
+    this.mCloseButton;
 };
 
 SideMenu.prototype.initialize = function(){
@@ -13,9 +16,10 @@ SideMenu.prototype.initialize = function(){
         aList = aList.concat(aLi);
     }
 
-    var aDiv = '<div id="side_menu_view"><ul id="menu_list">'+ aList +'</ul></div>';
-    this.mContainer.html(aDiv);
+    this.mDiv = $('<div id="side_menu_view"><ul id="menu_list">'+ aList +'</ul><div id="menu_icon"><img id="menu_icon_image" src="img/menu/menu.png"/></div></div>');
+    this.mContainer.html(this.mDiv);
 
+    this.mCloseButton = this.mContainer.find('#menu_icon');
 
     var aLi = this.mContainer.find('li');
     this.mContainer.css("pointer-events", "all");
@@ -23,7 +27,6 @@ SideMenu.prototype.initialize = function(){
     for(var i = 0; i < aLi.length; i++){
         $(aLi[i]).on('touchstart', function(aElement){
 
-            console.log("TS");
             $(aElement.currentTarget).addClass('touchStart');
 
             /*var aId = $(aElement.currentTarget).attr('id');
@@ -32,8 +35,14 @@ SideMenu.prototype.initialize = function(){
         });
 
         $(aLi[i]).on('touchend', function(aElement){
-            console.log("TE");
             $(aElement.currentTarget).removeClass('touchStart');
         });
     }
+
+    this.mCloseButton.on("tap", $.proxy(this.closeMenu, this));
+};
+
+SideMenu.prototype.closeMenu = function(){
+    this.mContainer.css("pointer-events", "none");
+    this.mMenu.closeSideMenu(this.mDiv);
 };
