@@ -1,6 +1,7 @@
-function Menu(aContainer, aSideMenuContainer){
+function Menu(aContainer, aSideMenuContainer, aContent){
     this.mContainer = $(aContainer);
     this.mSideMenuContainer = $(aSideMenuContainer);
+    this.mContent = $(aContent);
     this.mBack;
     this.mMenuButton;
     this.mCurrentBack = Controller.NAV_HOME;
@@ -18,6 +19,7 @@ Menu.prototype.initialize = function(){
 };
 
 Menu.prototype.onMenuClick = function(){
+    this.mContent.css("pointer-events", "none");
     this.mMenuButton.off('tap');
     var aSideMenu = new SideMenu(this.mSideMenuContainer, this);
     aSideMenu.initialize();
@@ -27,6 +29,7 @@ Menu.prototype.closeSideMenu = function(aSideMenuDiv){
     aSideMenuDiv.remove();
     aSideMenuDiv.empty();
 
+    this.mContent.css("pointer-events", "all");
     this.mMenuButton.on('tap', $.proxy(this.onMenuClick, this));
 };
 

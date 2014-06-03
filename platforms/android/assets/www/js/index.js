@@ -57,7 +57,7 @@ var app = {
     },
 
     initializationCompleted: function(){
-        var aMenu = new Menu($.find("#navBar"), $.find("#sideMenu"));
+        var aMenu = new Menu($.find("#navBar"), $.find("#sideMenu"), $.find("#content"));
         aMenu.initialize();
 
         CONTROLLER.setMenu(aMenu);
