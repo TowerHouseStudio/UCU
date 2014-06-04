@@ -35,8 +35,10 @@ Menu.prototype.closeSideMenu = function(aSideMenuDiv){
 
 Menu.prototype.showBackArrow = function(aBackUrl){
     this.mCurrentBack = aBackUrl;
-    this.mBack.css('visibility', 'visible');
-    this.mBack.on('tap', $.proxy(this.onBackClick, this));
+    if(this.mBack){
+        this.mBack.css('visibility', 'visible');
+        this.mBack.on('tap', $.proxy(this.onBackClick, this));
+    }
 };
 
 Menu.prototype.hideBackArraw = function(){

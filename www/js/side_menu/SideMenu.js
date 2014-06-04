@@ -29,9 +29,14 @@ SideMenu.prototype.initialize = function(){
 
             $(aElement.currentTarget).addClass('touchStart');
 
-            /*var aId = $(aElement.currentTarget).attr('id');
+        });
+
+        $(aLi[i]).on('tap', function(aElement){
+            var aId = $(aElement.currentTarget).attr('id');
             var aLink = aNavigation[parseInt(aId)].link;
-            self.navigate(aLink);*/
+            CONTROLLER.navigate(aLink);
+            CONTROLLER.getMenu().showBackArrow(Controller.NAV_HOME);
+            self.closeMenu();
         });
 
         $(aLi[i]).on('touchend', function(aElement){

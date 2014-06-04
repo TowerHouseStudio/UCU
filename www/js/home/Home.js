@@ -24,18 +24,14 @@ Home.prototype.initialize = function(){
         $(aLi[i]).on('tap', function(aElement){
             var aId = $(aElement.currentTarget).attr('id');
             var aLink = aNavigation[parseInt(aId)].link;
-            self.navigate(aLink);
+            var aTitle = aNavigation[parseInt(aId)].text;
+            self.navigate(aLink, aTitle);
         })
     }
 };
 
-Home.prototype.navigate = function(aUrl){
+Home.prototype.navigate = function(aUrl, aTitle){
 
-    CONTROLLER.navigate(aUrl);
-
-    /*var aContent = new Content(this.mContainer, aUrl, function(){});
-    aContent.initialize();*/
-
-    CONTROLLER.getMenu().showBackArrow(Controller.NAV_HOME);
+    CONTROLLER.navigate(aUrl, aTitle);
 };
 
