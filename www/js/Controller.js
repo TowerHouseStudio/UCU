@@ -32,7 +32,7 @@ Controller.prototype.navigate = function(aUrl, aTitle){
         aContent.initialize();
     }
 
-    if(this.mCurrentUrl != ""){
+    if(this.mCurrentUrl != "" && aUrl != Controller.NAV_HOME){
         this.getMenu().showBackArrow(this.mCurrentUrl);
     }
     this.mCurrentUrl = aUrl;

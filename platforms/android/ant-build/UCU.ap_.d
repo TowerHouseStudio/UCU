@@ -29,6 +29,7 @@ f:\work\icecubegames\ucu\platforms\android\assets\www\img\home \
 f:\work\icecubegames\ucu\platforms\android\assets\www\img\logo.png \
 f:\work\icecubegames\ucu\platforms\android\assets\www\img\menu \
 f:\work\icecubegames\ucu\platforms\android\assets\www\img\splash.png \
+f:\work\icecubegames\ucu\platforms\android\assets\www\img\submenu \
 f:\work\icecubegames\ucu\platforms\android\assets\www\img\home\admisiones_icon.png \
 f:\work\icecubegames\ucu\platforms\android\assets\www\img\home\agenda_icon.png \
 f:\work\icecubegames\ucu\platforms\android\assets\www\img\home\biblioteca_icon.png \
@@ -44,6 +45,7 @@ f:\work\icecubegames\ucu\platforms\android\assets\www\img\home\vida_icon.png \
 f:\work\icecubegames\ucu\platforms\android\assets\www\img\menu\back_button.png \
 f:\work\icecubegames\ucu\platforms\android\assets\www\img\menu\menu.png \
 f:\work\icecubegames\ucu\platforms\android\assets\www\img\menu\ucu_logo.png \
+f:\work\icecubegames\ucu\platforms\android\assets\www\img\submenu\submenu_arrow.png \
 f:\work\icecubegames\ucu\platforms\android\assets\www\js\content \
 f:\work\icecubegames\ucu\platforms\android\assets\www\js\Controller.js \
 f:\work\icecubegames\ucu\platforms\android\assets\www\js\home \
@@ -53,7 +55,10 @@ f:\work\icecubegames\ucu\platforms\android\assets\www\js\menu \
 f:\work\icecubegames\ucu\platforms\android\assets\www\js\side_menu \
 f:\work\icecubegames\ucu\platforms\android\assets\www\js\content\Content.js \
 f:\work\icecubegames\ucu\platforms\android\assets\www\js\content\default \
+f:\work\icecubegames\ucu\platforms\android\assets\www\js\content\submenu \
 f:\work\icecubegames\ucu\platforms\android\assets\www\js\content\default\Default.html \
+f:\work\icecubegames\ucu\platforms\android\assets\www\js\content\submenu\SubMenuContent.css \
+f:\work\icecubegames\ucu\platforms\android\assets\www\js\content\submenu\SubMenuContent.js \
 f:\work\icecubegames\ucu\platforms\android\assets\www\js\home\Home.js \
 f:\work\icecubegames\ucu\platforms\android\assets\www\js\home\HomeView.css \
 f:\work\icecubegames\ucu\platforms\android\assets\www\js\libs\jquery-1.11.1.min.js \

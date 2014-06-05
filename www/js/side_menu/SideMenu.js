@@ -16,7 +16,7 @@ SideMenu.prototype.initialize = function(){
         aList = aList.concat(aLi);
     }
 
-    this.mDiv = $('<div id="side_menu_view"><ul id="menu_list">'+ aList +'</ul><div id="menu_icon"><img id="menu_icon_image" src="img/menu/menu.png"/></div></div>');
+    this.mDiv = $('<div id="side_menu_view"><ul id="menu_list">'+ aList +'</ul><div id="menu_icon"><div id="menu_icon_container"><img id="menu_icon_image" src="img/menu/menu.png"/></div></div></div>');
     this.mContainer.html(this.mDiv);
 
     this.mCloseButton = this.mContainer.find('#menu_icon');
@@ -31,16 +31,14 @@ SideMenu.prototype.initialize = function(){
 
         });
 
-        $(aLi[i]).on('tap', function(aElement){
+        $(aLi[i]).on('touchend', function(aElement){
+            $(aElement.currentTarget).removeClass('touchStart');
+
             var aId = $(aElement.currentTarget).attr('id');
             var aLink = aNavigation[parseInt(aId)].link;
             CONTROLLER.navigate(aLink);
             CONTROLLER.getMenu().showBackArrow(Controller.NAV_HOME);
             self.closeMenu();
-        });
-
-        $(aLi[i]).on('touchend', function(aElement){
-            $(aElement.currentTarget).removeClass('touchStart');
         });
     }
 

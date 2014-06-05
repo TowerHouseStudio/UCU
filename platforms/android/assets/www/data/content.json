@@ -1,9 +1,41 @@
 {
     "navigation":[
-        {"icon":"img/home/contacto_icon.png",     "text":"Contácto",             "link":"js/content/default/Default.html"},
+        {"icon":"img/home/contacto_icon.png",     "text":"Contácto",             "link":
+            [
+                { "text":"Sede Central", "link":
+                    [
+                        { "text":"Biblioteca",                                       "link":"js/content/default/Default.html"},
+                        { "text":"Centro Técnico Audiovisual",                       "link":"js/content/default/Default.html"},
+                        { "text":"Laboratorios de Informática",                      "link":"js/content/default/Default.html"},
+                        { "text":"Registro Académico",                               "link":"js/content/default/Default.html"},
+                        { "text":"Secretaría de Asuntos Internacionales Académicos", "link":"js/content/default/Default.html"},
+                        { "text":"Secretaría de Información",                        "link":"js/content/default/Default.html"},
+                        { "text":"Oficinas de Administración",                       "link":"js/content/default/Default.html"}
+                    ]
+                },
+                { "text":"Secretarías Administrativas de Facultades", "link":"js/content/default/Default.html"},
+                { "text":"Sede Punta del Este",                       "link":"js/content/default/Default.html"},
+                { "text":"Sede Salto",                                "link":"js/content/default/Default.html"}
+            ]
+        },
         {"icon":"img/home/campus_icon.png",       "text":"Campus",               "link":"js/content/default/Default.html"},
         {"icon":"img/home/biblioteca_icon.png",   "text":"Biblioteca",           "link":"js/content/default/Default.html"},
-        {"icon":"img/home/vida_icon.png",         "text":"Vida Universitaria",   "link":"js/content/default/Default.html"},
+        {"icon":"img/home/vida_icon.png",         "text":"Vida Universitaria",   "link":
+            [
+                { "text":"Deporte y Recreación", "link":"js/content/default/Default.html"},
+                { "text":"Expresión Artística",  "link":
+                    [
+                        { "text":"Coro",      "link":"js/content/default/Default.html"},
+                        { "text":"Plástica",  "link":"js/content/default/Default.html"},
+                        { "text":"Teatro",    "link":"js/content/default/Default.html"}
+                    ]
+                },
+                { "text":"Extensión y Servicio a la Comunidad", "link":"js/content/default/Default.html"},
+                { "text":"Formación Humanística",               "link":"js/content/default/Default.html"},
+                { "text":"Orientación Estudiantil",             "link":"js/content/default/Default.html"},
+                { "text":"Participación Estudiantil",           "link":"js/content/default/Default.html"}
+            ]
+        },
         {"icon":"img/home/noticias_icon.png",     "text":"Noticias",             "link":"js/content/default/Default.html"},
         {"icon":"img/home/calendario_icon.png",   "text":"Calendario Academico", "link":"js/content/default/Default.html"},
         {"icon":"img/home/agenda_icon.png",       "text":"Agenda",               "link":"js/content/default/Default.html"},

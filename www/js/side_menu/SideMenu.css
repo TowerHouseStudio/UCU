@@ -9,7 +9,9 @@
         height: 5%;
         padding-top: 5%;
     }
-    
+
+    #side_menu_view #menu_icon_container { height: 12%; }
+
     #side_menu_view #menu_list #item_icon_container #item_icon {
         height: 50%;
     }
@@ -38,22 +40,21 @@
         height: 6%;
         margin-top: 1%;
     }
-    
+
+    #side_menu_view #menu_icon_container { height: 10%; }
+
     #side_menu_view #menu_list #item_icon_container #item_icon {
         height: 100%;
     }
     
     #side_menu_view #menu_icon {
         width: 10%;
-        /* margin: 4% 0% 0% 4.5%; */
     }
     
     #side_menu_view #menu_icon #menu_icon_image {
         width: 50%;
-        
-    
-        margin: 5% 0% 0% 23%;
-}
+        margin: 12% 0% 0% 23%;
+    }
 }
 
 
@@ -62,6 +63,8 @@
     width: 100%;
     float: left;
 }
+
+#side_menu_view #menu_icon_container { background-color: #416b8c; width: 100%;}
 
 #side_menu_view #menu_icon {
     position: relative;

@@ -2,6 +2,7 @@ function Controller(aContent){
     this.mData = {};
     this.mMenu;
     this.mContent = $(aContent);
+    this.mCurrentUrl = "";
 };
 
 Controller.prototype.initialize = function(onComplete){
@@ -13,7 +14,7 @@ Controller.prototype.initialize = function(onComplete){
     });
 };
 
-Controller.prototype.navigate = function(aUrl){
+Controller.prototype.navigate = function(aUrl, aTitle){
 
     var self = this;
     function navigate_home(){
@@ -21,17 +22,31 @@ Controller.prototype.navigate = function(aUrl){
         aHome.initialize();
     }
 
+    function navigateToSubMenu(aUrl, aTitle){
+        var aSubMenu = new SubMenuContent(aTitle, self.mContent, aUrl);
+        aSubMenu.initialize();
+    }
+
     function _navigate(){
         var aContent = new Content(self.mContent, aUrl, function(){});
         aContent.initialize();
     }
+
+    if(this.mCurrentUrl != "" && aUrl != Controller.NAV_HOME){
+        this.getMenu().showBackArrow(this.mCurrentUrl);
+    }
+    this.mCurrentUrl = aUrl;
 
     switch(aUrl){
         case Controller.NAV_HOME:
             navigate_home();
             break;
         default:
-            _navigate();
+            if(Array.isArray(aUrl)){
+                navigateToSubMenu(aUrl, aTitle)
+            }else{
+                _navigate();
+            }
             break;
     }
 };
