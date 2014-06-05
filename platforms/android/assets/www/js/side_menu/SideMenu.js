@@ -16,7 +16,7 @@ SideMenu.prototype.initialize = function(){
         aList = aList.concat(aLi);
     }
 
-    this.mDiv = $('<div id="side_menu_view"><ul id="menu_list">'+ aList +'</ul><div id="menu_icon"><img id="menu_icon_image" src="img/menu/menu.png"/></div></div>');
+    this.mDiv = $('<div id="side_menu_view"><ul id="menu_list">'+ aList +'</ul><div id="menu_icon"><div id="menu_icon_container"><img id="menu_icon_image" src="img/menu/menu.png"/></div></div></div>');
     this.mContainer.html(this.mDiv);
 
     this.mCloseButton = this.mContainer.find('#menu_icon');
@@ -36,16 +36,16 @@ SideMenu.prototype.initialize = function(){
 
             var aId = $(aElement.currentTarget).attr('id');
             var aLink = aNavigation[parseInt(aId)].link;
-            CONTROLLER.navigate(aLink);
+            var aTitle = aNavigation[parseInt(aId)].text;
+            CONTROLLER.navigate(aLink, aTitle);
             CONTROLLER.getMenu().showBackArrow(Controller.NAV_HOME);
             self.closeMenu();
         });
     }
 
-    this.mCloseButton.on("tap", $.proxy(this.closeMenu, this));
+    this.mCloseButton.on("touchend", $.proxy(this.closeMenu, this));
 };
 
 SideMenu.prototype.closeMenu = function(){
-    this.mContainer.css("pointer-events", "none");
     this.mMenu.closeSideMenu(this.mDiv);
 };

@@ -20,17 +20,22 @@ Menu.prototype.initialize = function(){
 
 Menu.prototype.onMenuClick = function(){
     this.mContent.css("pointer-events", "none");
-    this.mMenuButton.off('tap');
+    //this.mMenuButton.off('tap');
     var aSideMenu = new SideMenu(this.mSideMenuContainer, this);
     aSideMenu.initialize();
 };
 
 Menu.prototype.closeSideMenu = function(aSideMenuDiv){
+    var self = this;
     aSideMenuDiv.remove();
     aSideMenuDiv.empty();
 
     this.mContent.css("pointer-events", "all");
-    this.mMenuButton.on('tap', $.proxy(this.onMenuClick, this));
+    setTimeout(function(){
+        self.mSideMenuContainer.css("pointer-events", "none");
+    },100);
+
+    //this.mMenuButton.on('tap', $.proxy(this.onMenuClick, this));
 };
 
 Menu.prototype.showBackArrow = function(aBackUrl){

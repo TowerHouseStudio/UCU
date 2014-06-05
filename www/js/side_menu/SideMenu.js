@@ -36,16 +36,16 @@ SideMenu.prototype.initialize = function(){
 
             var aId = $(aElement.currentTarget).attr('id');
             var aLink = aNavigation[parseInt(aId)].link;
-            CONTROLLER.navigate(aLink);
+            var aTitle = aNavigation[parseInt(aId)].text;
+            CONTROLLER.navigate(aLink, aTitle);
             CONTROLLER.getMenu().showBackArrow(Controller.NAV_HOME);
             self.closeMenu();
         });
     }
 
-    this.mCloseButton.on("tap", $.proxy(this.closeMenu, this));
+    this.mCloseButton.on("touchend", $.proxy(this.closeMenu, this));
 };
 
 SideMenu.prototype.closeMenu = function(){
-    this.mContainer.css("pointer-events", "none");
     this.mMenu.closeSideMenu(this.mDiv);
 };
