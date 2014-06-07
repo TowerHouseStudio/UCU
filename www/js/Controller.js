@@ -3,6 +3,7 @@ function Controller(aContent){
     this.mMenu;
     this.mContent = $(aContent);
     this.mCurrentUrl = "";
+    this.mBackData = {back:null, title:"", link:""};
 };
 
 Controller.prototype.initialize = function(onComplete){
@@ -32,10 +33,10 @@ Controller.prototype.navigate = function(aUrl, aTitle){
         aContent.initialize();
     }
 
-    if(this.mCurrentUrl != "" && aUrl != Controller.NAV_HOME){
-        this.getMenu().showBackArrow(this.mCurrentUrl);
+    if(this.mBackData.back != null && aUrl != Controller.NAV_HOME){
+        this.getMenu().showBackArrow(this.mBackData);
     }
-    this.mCurrentUrl = aUrl;
+    this.mBackData = {back:this.mBackData, title:aTitle, link:aUrl};
 
     switch(aUrl){
         case Controller.NAV_HOME:

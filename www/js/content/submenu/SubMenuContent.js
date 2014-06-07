@@ -26,7 +26,7 @@ SubMenuContent.prototype.initialize = function(){
             var aLink = self.mContent[parseInt(aId)].link;
             var aTitle = self.mContent[parseInt(aId)].text;
             CONTROLLER.navigate(aLink, aTitle);
-            CONTROLLER.getMenu().showBackArrow(self.mContent);
+            //CONTROLLER.getMenu().showBackArrow(self.mContent);
         });
     }
 };
